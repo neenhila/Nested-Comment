@@ -36,7 +36,7 @@ const comments = [{
       } else {
         if (comment.isReply) {
           let createdCommentHTML = `
-      <div class="comment" style="margin-left: 150px; border: 1px solid blue" id="comment${comment.commentId}">
+      <div class="comment commentReply" style="margin-left: 150px; border: 1px solid blue" id="comment${comment.commentId}">
       <div class="text">
         ${comment.text}
       </div>
@@ -89,7 +89,7 @@ const comments = [{
     if (replyingTo > 0) {
       let comment = comments.find((item) => item.commentId === replyingTo);
       let author = comment.author;
-      info.innerHTML = `You're replying to <span style="font-color: red; font-weight: bold;">${author}</span>`;
+      info.innerHTML = `You're replying to <span>${author}</span>`;
     } else {
       info.innerHTML = "";
     }
@@ -160,6 +160,7 @@ const comments = [{
   async function refreshCommentQueue() {
     container.innerHTML = "";
     viewComment.length = 0;
+    replyingTo = 0;
   }
 
   // vote
