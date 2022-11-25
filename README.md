@@ -1,4 +1,4 @@
 Nested Comments with solid JS/HTML
 
 
-Live: [Click here!](https://neenhila.github.io/nested-comment)
+Live: [Click here!](https://neenhila.github.io/Nested-Comment/)
